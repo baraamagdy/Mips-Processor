@@ -1,0 +1,712 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Reading design: mips_collec.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips_collec.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips_collec"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : mips_collec
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\register_file2.v" into library work
+Parsing module <clockgen>.
+Parsing module <register>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\programCoun.v" into library work
+Parsing module <pc>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\panse_mem.v" into library work
+Parsing module <datamem>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\myinverter.v" into library work
+Parsing module <sign_extend>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\jump.v" into library work
+Parsing module <jump_branch>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\instruction_memory.v" into library work
+Parsing module <instruction_mem>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\control_unit.v" into library work
+Parsing module <control_unit>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\configuration.v" into library work
+Parsing module <instruction_conf>.
+Parsing module <muxMIPS1>.
+Parsing module <muxMIPS2>.
+Parsing module <mux_3_31>.
+Parsing module <mux_3_5>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\alu_control.v" into library work
+Parsing module <alu_control>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\alu.v" into library work
+Parsing module <MIPSALU>.
+Analyzing Verilog file "C:\Users\Lenovo\Documents\mipsxilinx\mips_complete.v" into library work
+Parsing module <mips_collec>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mips_collec>.
+
+Elaborating module <pc>.
+
+Elaborating module <instruction_mem>.
+
+Elaborating module <instruction_conf>.
+
+Elaborating module <control_unit>.
+
+Elaborating module <mux_3_5>.
+
+Elaborating module <register>.
+
+Elaborating module <jump_branch>.
+
+Elaborating module <alu_control>.
+
+Elaborating module <sign_extend>.
+
+Elaborating module <muxMIPS2>.
+
+Elaborating module <MIPSALU>.
+
+Elaborating module <datamem>.
+
+Elaborating module <mux_3_31>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mips_collec>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\mips_complete.v".
+        raRegAdd = 5'b11111
+    Summary:
+	no macro.
+Unit <mips_collec> synthesized.
+
+Synthesizing Unit <pc>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\programCoun.v".
+    Found 1-bit register for signal <pc_reg<31>>.
+    Found 1-bit register for signal <pc_reg<30>>.
+    Found 1-bit register for signal <pc_reg<29>>.
+    Found 1-bit register for signal <pc_reg<28>>.
+    Found 1-bit register for signal <pc_reg<27>>.
+    Found 1-bit register for signal <pc_reg<26>>.
+    Found 1-bit register for signal <pc_reg<25>>.
+    Found 1-bit register for signal <pc_reg<24>>.
+    Found 1-bit register for signal <pc_reg<23>>.
+    Found 1-bit register for signal <pc_reg<22>>.
+    Found 1-bit register for signal <pc_reg<21>>.
+    Found 1-bit register for signal <pc_reg<20>>.
+    Found 1-bit register for signal <pc_reg<19>>.
+    Found 1-bit register for signal <pc_reg<18>>.
+    Found 1-bit register for signal <pc_reg<17>>.
+    Found 1-bit register for signal <pc_reg<16>>.
+    Found 1-bit register for signal <pc_reg<15>>.
+    Found 1-bit register for signal <pc_reg<14>>.
+    Found 1-bit register for signal <pc_reg<13>>.
+    Found 1-bit register for signal <pc_reg<12>>.
+    Found 1-bit register for signal <pc_reg<11>>.
+    Found 1-bit register for signal <pc_reg<10>>.
+    Found 1-bit register for signal <pc_reg<9>>.
+    Found 1-bit register for signal <pc_reg<8>>.
+    Found 1-bit register for signal <pc_reg<7>>.
+    Found 1-bit register for signal <pc_reg<6>>.
+    Found 1-bit register for signal <pc_reg<5>>.
+    Found 1-bit register for signal <pc_reg<4>>.
+    Found 1-bit register for signal <pc_reg<3>>.
+    Found 1-bit register for signal <pc_reg<2>>.
+    Found 1-bit register for signal <pc_reg<1>>.
+    Found 1-bit register for signal <pc_reg<0>>.
+    Summary:
+	no macro.
+Unit <pc> synthesized.
+
+Synthesizing Unit <instruction_mem>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\instruction_memory.v".
+    Found 256x32-bit single-port RAM <Mram_inst_mem> for signal <inst_mem>.
+    Found 32-bit register for signal <instruction>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <instruction_mem> synthesized.
+
+Synthesizing Unit <instruction_conf>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\configuration.v".
+    Summary:
+	no macro.
+Unit <instruction_conf> synthesized.
+
+Synthesizing Unit <control_unit>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\control_unit.v".
+    Summary:
+	no macro.
+Unit <control_unit> synthesized.
+
+Synthesizing Unit <mux_3_5>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\configuration.v".
+    Found 5-bit 3-to-1 multiplexer for signal <out> created at line 57.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_3_5> synthesized.
+
+Synthesizing Unit <register>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\register_file2.v".
+    Found 32x32-bit dual-port RAM <Mram_RF> for signal <RF>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <register> synthesized.
+
+Synthesizing Unit <jump_branch>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\jump.v".
+        op_bne = 6'b000101
+        op_beq = 6'b000100
+        op_jr = 6'b000000
+        jr_funct = 6'b001000
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <jump_branch> synthesized.
+
+Synthesizing Unit <alu_control>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\alu_control.v".
+        add = 2'b00
+        sub = 2'b01
+        R_formate = 2'b10
+        ori = 2'b11
+    Summary:
+	no macro.
+Unit <alu_control> synthesized.
+
+Synthesizing Unit <sign_extend>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\myinverter.v".
+    Summary:
+	no macro.
+Unit <sign_extend> synthesized.
+
+Synthesizing Unit <muxMIPS2>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\configuration.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <muxMIPS2> synthesized.
+
+Synthesizing Unit <MIPSALU>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\alu.v".
+    Found 32-bit subtractor for signal <A[31]_B[31]_sub_5_OUT> created at line 13.
+    Found 32-bit adder for signal <A[31]_B[31]_add_3_OUT> created at line 12.
+    Found 32-bit shifter logical left for signal <A[31]_shamt[4]_shift_left_9_OUT> created at line 16
+    Found 32-bit shifter arithmetic right for signal <A[31]_shamt[4]_shift_right_10_OUT> created at line 17
+    Found 32-bit shifter logical right for signal <A[31]_shamt[4]_shift_right_11_OUT> created at line 18
+    Found 32-bit 10-to-1 multiplexer for signal <ALUout> created at line 9.
+    Found 32-bit comparator greater for signal <A[31]_B[31]_LessThan_6_o> created at line 14
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   8 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <MIPSALU> synthesized.
+
+Synthesizing Unit <datamem>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\panse_mem.v".
+    Found 256x32-bit single-port RAM <Mram_mem> for signal <mem>.
+    Found 32-bit register for signal <read_data>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <datamem> synthesized.
+
+Synthesizing Unit <mux_3_31>.
+    Related source file is "C:\Users\Lenovo\Documents\mipsxilinx\configuration.v".
+    Found 32-bit 3-to-1 multiplexer for signal <out> created at line 37.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_3_31> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x32-bit single-port RAM                            : 2
+ 32x32-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 1
+ 32-bit addsub                                         : 1
+# Registers                                            : 2
+ 32-bit register                                       : 2
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 14
+ 2-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 10
+ 32-bit 3-to-1 multiplexer                             : 1
+ 5-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment F:\Xilinx\14.7\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '7a100t.nph' in environment F:\Xilinx\14.7\ISE_DS\ISE\.
+
+Synthesizing (advanced) Unit <datamem>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <read_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <write_data>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     enB            | connected to internal node          | high     |
+    |     addrB          | connected to signal <address>       |          |
+    |     doB            | connected to signal <read_data>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <datamem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <instruction_mem>.
+INFO:Xst:3226 - The RAM <Mram_inst_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <instruction>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <VCC>           | high     |
+    |     addrA          | connected to signal <pc>            |          |
+    |     diA            | connected to signal <instr>         |          |
+    |     doA            | connected to signal <instruction>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <instruction_mem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <register>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RF> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <regwrite>      | high     |
+    |     addrA          | connected to signal <writereg>      |          |
+    |     diA            | connected to signal <writedata>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <read1>         |          |
+    |     doB            | connected to signal <data1>         |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RF1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <regwrite>      | high     |
+    |     addrA          | connected to signal <writereg>      |          |
+    |     diA            | connected to signal <writedata>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <read2>         |          |
+    |     doB            | connected to signal <data2>         |          |
+    -----------------------------------------------------------------------
+Unit <register> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x32-bit dual-port block RAM                        : 1
+ 256x32-bit single-port block RAM                      : 1
+ 32x32-bit dual-port distributed RAM                   : 2
+# Adders/Subtractors                                   : 1
+ 32-bit addsub                                         : 1
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 14
+ 2-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 10
+ 32-bit 3-to-1 multiplexer                             : 1
+ 5-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mips_collec> ...
+
+Optimizing unit <MIPSALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mips_collec, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mips_collec.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 598
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 4
+#      LUT3                        : 63
+#      LUT4                        : 68
+#      LUT5                        : 111
+#      LUT6                        : 255
+#      MUXCY                       : 47
+#      MUXF7                       : 15
+#      VCC                         : 1
+#      XORCY                       : 32
+# RAMS                             : 16
+#      RAM32M                      : 10
+#      RAM32X1D                    : 4
+#      RAMB18E1                    : 1
+#      RAMB36E1                    : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 96
+#      IBUF                        : 32
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  550  out of  63400     0%  
+    Number used as Logic:               502  out of  63400     0%  
+    Number used as Memory:               48  out of  19000     0%  
+       Number used as RAM:               48
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    550
+   Number with an unused Flip Flop:     550  out of    550   100%  
+   Number with an unused LUT:             0  out of    550     0%  
+   Number of fully used LUT-FF pairs:     0  out of    550     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          97
+ Number of bonded IOBs:                  97  out of    210    46%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of    135     1%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 17    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------------+-------+
+Control Signal                     | Buffer(FF name)              | Load  |
+-----------------------------------+------------------------------+-------+
+reset(XST_VCC:P)                   | NONE(mips_mem/Mram_inst_mem1)| 2     |
+-----------------------------------+------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 13.624ns (Maximum Frequency: 73.399MHz)
+   Minimum input arrival time before clock: 0.554ns
+   Maximum output required time after clock: 7.589ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 13.624ns (frequency: 73.399MHz)
+  Total number of paths / destination ports: 90700 / 221
+-------------------------------------------------------------------------
+Delay:               6.812ns (Levels of Logic = 6)
+  Source:            mips_mem/Mram_inst_mem1 (RAM)
+  Destination:       memory/Mram_mem (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: mips_mem/Mram_inst_mem1 to memory/Mram_mem
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOBDO9   18   2.125   0.434  mips_mem/Mram_inst_mem1 (instruction<25>)
+     RAM32M:ADDRB4->DOB1   13   0.299   0.684  reg_file/Mram_RF5 (data1<27>)
+     LUT6:I2->O            5   0.097   0.594  alu_mips/Sh1201 (alu_mips/Sh120)
+     LUT6:I3->O            5   0.097   0.378  alu_mips/Sh1442 (alu_mips/Sh144)
+     LUT6:I5->O            1   0.097   0.355  alu_mips/Sh1603 (alu_mips/Sh160)
+     LUT5:I4->O            1   0.097   0.616  alu_mips/Mmux_ALUout921 (alu_mips/Mmux_ALUout92)
+     LUT5:I1->O            3   0.097   0.351  alu_mips/Mmux_ALUout924 (ALUout<0>)
+     RAMB36E1:ADDRBWRADDR5        0.490          memory/Mram_mem
+    ----------------------------------------
+    Total                      6.812ns (3.399ns logic, 3.413ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              0.554ns (Levels of Logic = 1)
+  Source:            instr<15> (PAD)
+  Destination:       mips_mem/Mram_inst_mem1 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: instr<15> to mips_mem/Mram_inst_mem1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.339  instr_15_IBUF (instr_15_IBUF)
+     RAMB18E1:DIADI15          0.214          mips_mem/Mram_inst_mem1
+    ----------------------------------------
+    Total                      0.554ns (0.215ns logic, 0.339ns route)
+                                       (38.8% logic, 61.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 37679 / 64
+-------------------------------------------------------------------------
+Offset:              7.589ns (Levels of Logic = 29)
+  Source:            mips_mem/Mram_inst_mem1 (RAM)
+  Destination:       writedata<22> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mips_mem/Mram_inst_mem1 to writedata<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO5    7   2.125   0.777  mips_mem/Mram_inst_mem1 (instruction<5>)
+     LUT5:I0->O            2   0.097   0.360  alu_cont/alu_4_lines<4>4_SW0 (N18)
+     LUT6:I5->O          131   0.097   0.503  alu_cont/alu_4_lines<4>4 (ALUCtl<0>)
+     LUT5:I4->O            1   0.097   0.000  alu_mips/Mmux_ALUout2_rs_lut<2> (alu_mips/Mmux_ALUout2_rs_lut<2>)
+     MUXCY:S->O            1   0.353   0.000  alu_mips/Mmux_ALUout2_rs_cy<2> (alu_mips/Mmux_ALUout2_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<3> (alu_mips/Mmux_ALUout2_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<4> (alu_mips/Mmux_ALUout2_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<5> (alu_mips/Mmux_ALUout2_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<6> (alu_mips/Mmux_ALUout2_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<7> (alu_mips/Mmux_ALUout2_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<8> (alu_mips/Mmux_ALUout2_rs_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<9> (alu_mips/Mmux_ALUout2_rs_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<10> (alu_mips/Mmux_ALUout2_rs_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<11> (alu_mips/Mmux_ALUout2_rs_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<12> (alu_mips/Mmux_ALUout2_rs_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<13> (alu_mips/Mmux_ALUout2_rs_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<14> (alu_mips/Mmux_ALUout2_rs_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<15> (alu_mips/Mmux_ALUout2_rs_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<16> (alu_mips/Mmux_ALUout2_rs_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<17> (alu_mips/Mmux_ALUout2_rs_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<18> (alu_mips/Mmux_ALUout2_rs_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<19> (alu_mips/Mmux_ALUout2_rs_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<20> (alu_mips/Mmux_ALUout2_rs_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  alu_mips/Mmux_ALUout2_rs_cy<21> (alu_mips/Mmux_ALUout2_rs_cy<21>)
+     XORCY:CI->O           1   0.370   0.355  alu_mips/Mmux_ALUout2_rs_xor<22> (alu_mips/Mmux_ALUout2_split<22>)
+     LUT6:I5->O            1   0.097   0.355  dataStoredInReg/Mmux_out154 (dataStoredInReg/Mmux_out153)
+     LUT6:I5->O            1   0.097   0.000  dataStoredInReg/Mmux_out156_F (N78)
+     MUXF7:I0->O           1   0.277   0.743  dataStoredInReg/Mmux_out156 (dataStoredInReg/Mmux_out155)
+     LUT5:I0->O            3   0.097   0.351  dataStoredInReg/Mmux_out157 (writedata_22_OBUF)
+     OBUF:I->O                 0.000          writedata_22_OBUF (writedata<22>)
+    ----------------------------------------
+    Total                      7.589ns (4.144ns logic, 3.445ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.849|    3.576|    6.812|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 43.00 secs
+Total CPU time to Xst completion: 43.09 secs
+ 
+--> 
+
+Total memory usage is 5086516 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+
